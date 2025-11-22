@@ -1,0 +1,3 @@
+Nathan's P2: Yoga Exercises
+
+This component is able to help users for when they are overwhelmed or are stressed. The component will give exercises related to the areas the user are stressed in (head, arm, leg etc.). The component will ask how is the user feeling in X, Y and Z and save those results for the end results. The exercises will rotate to new exercises over a duration that the user entered in. Once the exercises are completed, the component will ask the use the same question before the exercises started and will check if there was any improvement made.
