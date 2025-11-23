@@ -16,8 +16,8 @@
 <!--Select Duration -->
 <SetTimer/>
 
-<!-- Page Navigation -->
-<NextPageButton to="/running" label="Start" navigate={navigate}/>
-
 <!-- Popup for Current State of Mind -->
 <Popup/>
+
+<!-- Page Navigation -->
+<NextPageButton to="/running" label="Start" navigate={navigate}/>

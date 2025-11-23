@@ -2,7 +2,7 @@
     import { createEventDispatcher } from 'svelte';
     import "./global.css";
 
-    export let question = "How would you rate this?";
+    export let question = "How do you feel currently?";
     export let show = false;
 
     const dispatch = createEventDispatcher();

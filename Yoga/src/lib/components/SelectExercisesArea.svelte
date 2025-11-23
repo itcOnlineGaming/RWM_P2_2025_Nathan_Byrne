@@ -1,11 +1,13 @@
 <script lang="ts">
+    import { exerciseEnabled } from "./store";
     import "./global.css";
     
-    export let exerciseEnabled: boolean[] = Array(10).fill(true);
-
     function updateToggle(index: number): void {
-        exerciseEnabled[index] = !exerciseEnabled[index];
-        console.log(exerciseEnabled[index]);
+        exerciseEnabled.update(arr => {
+            arr[index] = !arr[index];
+            console.log(arr[index]);
+            return arr;
+        });
     }
 </script>
 
