@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "./nextPageNutton.css";
+    import "./nextPageButton.css";
     
     export let to = "/";
     export let label = "Go";
