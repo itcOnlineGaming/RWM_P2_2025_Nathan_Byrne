@@ -2,6 +2,8 @@
     import { goto } from "$app/navigation";
     import SelectExercisesArea from "$lib/components/SelectExercisesArea.svelte";
     import NextPageButton from "$lib/components/NextPageButton.svelte";
+    import SetTimer from "$lib/components/SetTimer.svelte";
+    import Popup from "$lib/components/Popup.svelte";
 
     const navigate = (path: string) => goto(path);
 </script>
@@ -11,7 +13,11 @@
 <!-- Selecting Exercises -->
 <SelectExercisesArea/>
 
+<!--Select Duration -->
+<SetTimer/>
+
 <!-- Page Navigation -->
 <NextPageButton to="/running" label="Start" navigate={navigate}/>
 
 <!-- Popup for Current State of Mind -->
+<Popup/>
