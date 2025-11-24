@@ -65,5 +65,5 @@
     });
 </script>
 
-<h1>Current Exercise: {currentExercise}</h1>
-<h1>Duration: {formatTime(timeRemaining)}</h1>
+<h2>Current Exercise: {currentExercise}</h2>
+<h2>Duration: {formatTime(timeRemaining)} of {formatTime($timer)}</h2>

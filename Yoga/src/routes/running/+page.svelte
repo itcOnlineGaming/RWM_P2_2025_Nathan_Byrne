@@ -1,17 +1,26 @@
 <script lang="ts">
+    import { get } from 'svelte/store';
     import { goto } from "$app/navigation";
+    import { timer, timeRemaining, completedTime } from "$lib/components/store";
     //import { exerciseEnabled } from "../../lib/components/SelectExercisesArea.svelte";
     import NextPageButton from "$lib/components/NextPageButton.svelte";
     import CycleExercises from "$lib/components/CycleExercises.svelte";
     //import timeRemaining from "$lib/components/CycleExercises.svelte";
     import "../page.css";
 
-    export let timeRemaining: number;
-
     function handleTimer(event: CustomEvent) {
-        timeRemaining = event.detail;
-        if (timeRemaining == 0)
+        const newTimeRemaining = event.detail;
+        timeRemaining.set(newTimeRemaining);
+
+        const currTimeRema = newTimeRemaining;
+        const totalTime = get(timer);
+
+        completedTime.set((totalTime - currTimeRema) / totalTime);
+        completedTime.set($completedTime * 100);
+
+        if (currTimeRema === 0) {
             goto("/results");
+        }
     }
     
     const navigate = (path: string) => goto(path);
