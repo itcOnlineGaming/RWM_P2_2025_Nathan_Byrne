@@ -4,20 +4,23 @@
     import NextPageButton from "$lib/components/NextPageButton.svelte";
     import SetTimer from "$lib/components/SetTimer.svelte";
     import Popup from "$lib/components/Popup.svelte";
+    import "./page.css";
 
     const navigate = (path: string) => goto(path);
 </script>
 
-<p>Yoga Main Page</p>
+<div class="container">
+    <h1>Yoga Exercises</h1>
 
-<!-- Selecting Exercises -->
-<SelectExercisesArea/>
+    <!-- Selecting Exercises -->
+    <SelectExercisesArea/>
 
-<!--Select Duration -->
-<SetTimer/>
+    <!--Select Duration -->
+    <SetTimer/>
 
-<!-- Popup for Current State of Mind -->
-<Popup/>
+    <!-- Popup for Current State of Mind -->
+    <Popup/>
 
-<!-- Page Navigation -->
-<NextPageButton to="/running" label="Start" navigate={navigate}/>
+    <!-- Page Navigation -->
+    <NextPageButton to="/running" label="Start" navigate={navigate}/>
+</div>

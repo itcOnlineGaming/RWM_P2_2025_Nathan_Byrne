@@ -1,3 +1,18 @@
+.button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.button-wrapper button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
 /* Timer */
 .timer-container {
     display: flex;

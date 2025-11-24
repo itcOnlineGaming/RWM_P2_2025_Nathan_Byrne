@@ -4,6 +4,7 @@
     import NextPageButton from "$lib/components/NextPageButton.svelte";
     import CycleExercises from "$lib/components/CycleExercises.svelte";
     //import timeRemaining from "$lib/components/CycleExercises.svelte";
+    import "../page.css";
 
     export let timeRemaining: number;
 
@@ -16,10 +17,12 @@
     const navigate = (path: string) => goto(path);
 </script>
 
-<p>Yoga Running Page</p>
+<div class="container">
+    <h1>Yoga Exercise Session</h1>
 
-<!-- Shown Current Exercise -->
-<CycleExercises on:timerUpdate={handleTimer}/>
+    <!-- Shown Current Exercise -->
+    <CycleExercises on:timerUpdate={handleTimer}/>
 
-<!-- Early Navigation to Results -->
-<NextPageButton to="/results" label="End Session Early" navigate={navigate}/>
+    <!-- Early Navigation to Results -->
+    <NextPageButton to="/results" label="End Session Early" navigate={navigate}/>
+</div>

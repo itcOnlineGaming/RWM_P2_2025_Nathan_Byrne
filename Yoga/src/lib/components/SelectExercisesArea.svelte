@@ -25,7 +25,7 @@ Possible Choices:
     Warrior II 🚶‍♂️👈👉
 -->
 
-<div class="area">
+<div class="button-wrapper">
     <button class="btn" on:click={() => updateToggle(0)}>🧘
         <div class="tooltip">Meditate</div> </button>
     <button class="btn" on:click={() => updateToggle(1)}>😮‍💨
