@@ -10,7 +10,7 @@
     }
 
     function decrease() {
-        timer.update(current => Math.max(current - increment, 0));
+        timer.update(current => Math.max(current - increment, 60));
     }
 
     function formatTime(sec: number) {
