@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { get } from 'svelte/store';
     import { goto } from "$app/navigation";
     import NextPageButton from "$lib/components/NextPageButton.svelte";
     import Popup from "$lib/components/Popup.svelte";
     import "../page.css";
-    import { timer, timeRemaining, completedTime } from "$lib/components/store";
+    import { pastFeelingReported, completedTime, statusMessage } from "$lib/components/store";
 
     const navigateMainMenu = (path: string) => goto(path);
     const navigateRunning = (path: string) => goto(path);
@@ -13,6 +14,8 @@
     <h1>Yoga Exercise Results</h1>
 
     <h2>Duration Completed: {$completedTime.toFixed(2)}%</h2>    
+
+    <h2>Current Feeling Status: {$statusMessage}</h2>
 
     <!-- Retake Current Feeling Form -->
     <Popup/>

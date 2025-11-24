@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { get } from 'svelte/store';
+    import { pastFeelingReported, currentFeelingReported, statusMessage } from "./store.ts";
     import { createEventDispatcher } from 'svelte';
     import "./global.css";
 
@@ -19,6 +21,19 @@
 
     function selectRating(rating: number) {
         dispatch('ratingSelected', { rating });
+        console.log(get(pastFeelingReported));
+        if (get(pastFeelingReported) === -1) {
+            pastFeelingReported.set(rating);
+        }
+        else {
+            currentFeelingReported.set(rating);
+            if (get(currentFeelingReported) > get(pastFeelingReported))
+                statusMessage.set("Yoga has improved your mood!");
+            else if (get(currentFeelingReported) < get(pastFeelingReported))
+                statusMessage.set("You dont feel as great, maybe try something else.");
+            else statusMessage.set("You feel the same as you did before trying yoga.");
+        }
+        console.log("Feeling Reported");
         close();
     }
 
