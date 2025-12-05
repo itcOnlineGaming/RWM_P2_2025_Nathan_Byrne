@@ -10,7 +10,7 @@
 </script>
 
 <div class="container">
-    <h1>Yoga Exercises</h1>
+    <h1 class="text-bubble">Yoga Exercises</h1>
 
     <!-- Selecting Exercises -->
     <SelectExercisesArea/>
@@ -18,9 +18,9 @@
     <!--Select Duration -->
     <SetTimer/>
 
-    <!-- Popup for Current State of Mind -->
-    <Popup/>
-
     <!-- Page Navigation -->
     <NextPageButton to="/running" label="Start" navigate={navigate}/>
+
+    <!-- Popup for Current State of Mind -->
+    <Popup/>
 </div>
