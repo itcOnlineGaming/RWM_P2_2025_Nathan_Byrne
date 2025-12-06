@@ -1,9 +1,11 @@
 <script lang="ts">
+    import { ExerciseButtons } from "./SelectExercisesArea.stories";
     import { exerciseEnabled, timer } from "./store";
     import { createEventDispatcher, onDestroy } from "svelte";
 
     export let timeRemaining = $timer;
     let currentExercise: string = "";
+    let currentExerciseImg: string = "";
     const interval = setInterval(updateCurrentExercise, 60000);
     const timeInterval = setInterval(updateTime, 1000);
     const dispatch = createEventDispatcher();
@@ -22,6 +24,24 @@
     Warrior II 🚶‍♂️👈👉
     */
 
+    interface Exercise {
+        name: string;
+        img: string;
+    }
+
+    const exercises: Exercise[] = [
+        { name: "Meditate 🧘", img: "/images/Meditate.png" },
+        { name: "Deep Breaths 😮‍💨", img: "/images/DeepBreaths.png" },
+        { name: "Cartwheel 🤸", img: "/images/Cartwheel.png" },
+        { name: "Loosen Up 🙆", img: "/images/LoosenUp.png" },
+        { name: "Downward Dog 🙇⬆️", img: "/images/DownwardDog.png" },
+        { name: "Bridge Pose 🌉", img: "/images/BridgePose.png" },
+        { name: "Tree Pose 🧍🌿", img: "/images/TreePose.png" },
+        { name: "Plank 🧍➖", img: "/images/Plank.png" },
+        { name: "Warrior I 🚶‍♂️✋", img: "/images/WarriorII.png" },
+        { name: "Warrior II 🚶‍♂️👈👉", img: "/images/WarriorII.png" }
+    ];
+
     function updateCurrentExercise() {
         // Random Exercise
         let randI;
@@ -29,18 +49,8 @@
             randI = Math.floor(Math.random() * 10);
         } while ($exerciseEnabled[randI] == false);
         console.log("Ran " + randI);
-        switch (randI) {
-            case 0: currentExercise="Meditate 🧘"; break;
-            case 1: currentExercise="Deep Breaths 😮‍💨"; break;
-            case 2: currentExercise="Cartwheel 🤸"; break;
-            case 3: currentExercise="Loosen Up 🙆"; break;
-            case 4: currentExercise="Downward Dog 🙇⬆️"; break;
-            case 5: currentExercise="Bridge Pose 🌉"; break;
-            case 6: currentExercise="Tree Pose 🧍🌿"; break;
-            case 7: currentExercise="Plank 🧍➖"; break;
-            case 8: currentExercise="Warrior I 🚶‍♂️✋"; break;
-            case 9: currentExercise="Warrior II 🚶‍♂️👈👉"; break;
-        }
+        currentExercise = exercises[randI].name;
+        currentExerciseImg = exercises[randI].img;
     }
 
     updateCurrentExercise();
@@ -65,5 +75,25 @@
     });
 </script>
 
-<h2>Current Exercise: {currentExercise}</h2>
-<h2>Duration: {formatTime(timeRemaining)} of {formatTime($timer)}</h2>
+<div class="non-img-side">
+    <div class="text-bubble">
+        <h2>Current Exercise: {currentExercise}</h2>
+        <h2>Duration: {formatTime(timeRemaining)} of {formatTime($timer)}</h2>
+    </div>
+</div>
+
+<div class="img-side">
+    <img src={currentExerciseImg} alt={currentExercise}/>
+</div>
+
+<style>
+    .non-img-side {
+        flex: 1;
+    }
+
+    .img-side img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+    }
+</style>
