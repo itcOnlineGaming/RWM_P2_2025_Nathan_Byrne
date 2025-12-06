@@ -1,12 +1,12 @@
 <script lang="ts">
     import { ExerciseButtons } from "./SelectExercisesArea.stories";
-    import { exerciseEnabled, timer } from "./store";
+    import { exerciseEnabled, timer, rotateTimer } from "./store";
     import { createEventDispatcher, onDestroy } from "svelte";
 
     export let timeRemaining = $timer;
     let currentExercise: string = "";
     let currentExerciseImg: string = "";
-    const interval = setInterval(updateCurrentExercise, 60000);
+    const interval = setInterval(updateCurrentExercise, $rotateTimer * 1000);
     const timeInterval = setInterval(updateTime, 1000);
     const dispatch = createEventDispatcher();
 
