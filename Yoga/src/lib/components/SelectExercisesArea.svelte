@@ -1,7 +1,8 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import { exerciseEnabled } from "./store";
     import "./global.css";
-    
+
     function updateToggle(index: number): void {
         exerciseEnabled.update(arr => {
             arr[index] = !arr[index];
@@ -9,6 +10,32 @@
             return arr;
         });
     }
+
+    const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    function handleKeyboardClicks(num: number): void {
+        const convertKeyPress: { [key: number]: number } = {
+            1:0, 2:1, 3:2, 4:3, 5:4,
+            6:5, 7:6, 8:7, 9:8, 0:9
+        }
+        const index = convertKeyPress[num];
+        updateToggle(index);
+    }
+
+    onMount(() => {
+        const handleKeydown = (event: KeyboardEvent) => {
+            const key = event.key;
+            if (key >= '0' && key <= '9') {
+                const num = parseInt(event.key);
+                handleKeyboardClicks(num);
+            }
+        };
+
+        document.addEventListener('keydown', handleKeydown);
+        return () => {
+            document.removeEventListener('keydown', handleKeydown);
+        }; 
+    });
 </script>
 
 <!-- 
