@@ -1,4 +1,4 @@
-### Nathan's P2: Yoga Exercises
+# Nathan's P2: Yoga Exercises
 
 ## Description
 This component is able to help users for when they are overwhelmed or are stressed. The component will ask how is the user feeling and save those results for the end results. The exercises will rotate to new exercises over a duration that the user entered in. Once the exercises are completed, the component will ask the use the same question before the exercises started and will check if there was any improvement made.
@@ -14,25 +14,25 @@ This component is able to help users for when they are overwhelmed or are stress
 8. Either: Replay the same Session / Exit to the Main Menu and Create a new Session with any Configurations
 
 ## Features Included
-Packaged Project (Able to be included in other Sveltekit Projects)
-Keyboard Support
-Customisable Settings (Exercises Choice, User Duration, User Cycle Speed, Optional Feedback Question)
-Supporting Images for Exercises
-Replayable Sessions (or Create New Sessions)
+- Packaged Project (Able to be included in other Sveltekit Projects)
+- Keyboard Support
+- Customisable Settings (Exercises Choice, User Duration, User Cycle Speed, Optional Feedback Question)
+- Supporting Images for Exercises
+- Replayable Sessions (or Create New Sessions)
 
 ## Keybinds
-Main Page:
-Toggle Exercises: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
-Adjustable Duration: Q/q (Decrease), E/e (Increase)
-Adjustable Cycle Speed: A/a (Decrease), D/d (Increase)
-Start Session: Space
+- Main Page:
+1. Toggle Exercises: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+2. Adjustable Duration: Q/q (Decrease), E/e (Increase)
+3. Adjustable Cycle Speed: A/a (Decrease), D/d (Increase)
+4. Start Session: Space
 
-Session Page:
-End Session Early: Space
+- Session Page:
+1. End Session Early: Space
 
-Results Page:
-Retry Session: Space
-Exit to Main Menu: Escape
+- Results Page:
+1. Retry Session: Space
+2. Exit to Main Menu: Escape
 
 ## Project Structure
 ```
