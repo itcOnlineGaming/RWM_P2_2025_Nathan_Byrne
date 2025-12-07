@@ -12,7 +12,7 @@
 
 <div class="container">
     <h1 class="text-bubble">Yoga Exercises</h1>
-
+    
     <!-- Selecting Exercises -->
     <SelectExercisesArea/>
 

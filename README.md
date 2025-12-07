@@ -1,7 +1,40 @@
-Nathan's P2: Yoga Exercises
+### Nathan's P2: Yoga Exercises
 
-This component is able to help users for when they are overwhelmed or are stressed. The component will give exercises related to the areas the user are stressed in (head, arm, leg etc.). The component will ask how is the user feeling in X, Y and Z and save those results for the end results. The exercises will rotate to new exercises over a duration that the user entered in. Once the exercises are completed, the component will ask the use the same question before the exercises started and will check if there was any improvement made.
+## Description
+This component is able to help users for when they are overwhelmed or are stressed. The component will ask how is the user feeling and save those results for the end results. The exercises will rotate to new exercises over a duration that the user entered in. Once the exercises are completed, the component will ask the use the same question before the exercises started and will check if there was any improvement made.
 
+## User Tests
+1. Create a Session that Includes a Maximum of 7 Exercises.
+2. Create a Session with a Duration of 12 Minutes or Over.
+3. Create a Session with a Cycle Speed of 30 Seconds.
+4. Enter in a Mood Feeling of 4 on the Main Menu
+5. Start Session from Main Menu
+6. Either: End the Session Early / Wait out the Timer
+7. Enter in a Mood Feeling of 9 and Check the Mood Message
+8. Either: Replay the same Session / Exit to the Main Menu and Create a new Session with any Configurations
+
+## Features Included
+Packaged Project (Able to be included in other Sveltekit Projects)
+Keyboard Support
+Customisable Settings (Exercises Choice, User Duration, User Cycle Speed, Optional Feedback Question)
+Supporting Images for Exercises
+Replayable Sessions (or Create New Sessions)
+
+## Keybinds
+Main Page:
+Toggle Exercises: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+Adjustable Duration: Q/q (Decrease), E/e (Increase)
+Adjustable Cycle Speed: A/a (Decrease), D/d (Increase)
+Start Session: Space
+
+Session Page:
+End Session Early: Space
+
+Results Page:
+Retry Session: Space
+Exit to Main Menu: Escape
+
+## Project Structure
 ```
 root/
 ├── Demo/ (This includes the packages of the Yoga Exercise being used in a real application. This is an example of the packages working.)

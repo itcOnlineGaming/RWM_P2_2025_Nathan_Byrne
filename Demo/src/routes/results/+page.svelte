@@ -16,6 +16,6 @@
 
     <Popup/>
 
-    <NextPageButton to="/running" label="Try Again" navigate={navigateMainMenu}/>
-    <NextPageButton to="/" label="Return to Exercise Selection" navigate={navigateMainMenu}/>
+    <NextPageButton to="/running" label="Try Again" keyBind=' ' navigate={navigateMainMenu}/>
+    <NextPageButton to="/" label="Return to Exercise Selection" keyBind='Escape' navigate={navigateRunning}/>
 </div>

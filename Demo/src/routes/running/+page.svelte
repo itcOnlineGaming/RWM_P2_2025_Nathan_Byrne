@@ -27,5 +27,5 @@
 
     <CycleExercises on:timerUpdate={handleTimer}/>
 
-    <NextPageButton to="/results" label="End Session Early" navigate={navigate}/>
+    <NextPageButton to="/results" label="End Session Early" keyBind=' ' navigate={navigate}/>
 </div>

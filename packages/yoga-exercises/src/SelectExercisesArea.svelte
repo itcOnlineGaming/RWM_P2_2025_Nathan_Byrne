@@ -25,6 +25,7 @@
     onMount(() => {
         const handleKeydown = (event: KeyboardEvent) => {
             const key = event.key;
+            // Exercise Keys
             if (key >= '0' && key <= '9') {
                 const num = parseInt(event.key);
                 handleKeyboardClicks(num);
@@ -51,6 +52,8 @@ Possible Choices:
     Warrior I 🚶‍♂️✋
     Warrior II 🚶‍♂️👈👉
 -->
+
+<h2>Toggle Exercises</h2>
 
 <div class="button-wrapper">
     <button class="btn" class:green-border={$exerciseEnabled[0]} class:red-border={!$exerciseEnabled[0]} on:click={() => updateToggle(0)}>🧘

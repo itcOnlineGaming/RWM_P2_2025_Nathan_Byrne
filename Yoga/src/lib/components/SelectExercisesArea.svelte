@@ -53,6 +53,8 @@ Possible Choices:
     Warrior II 🚶‍♂️👈👉
 -->
 
+<h2>Toggle Exercises</h2>
+
 <div class="button-wrapper">
     <button class="btn" class:green-border={$exerciseEnabled[0]} class:red-border={!$exerciseEnabled[0]} on:click={() => updateToggle(0)}>🧘
         <div class="tooltip">Meditate<br>Relax your Body, and Focus<br>

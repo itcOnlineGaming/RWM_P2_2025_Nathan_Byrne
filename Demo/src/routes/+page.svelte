@@ -13,13 +13,15 @@
 
     <SetValue 
         store={timer} label={"Duration"} maxTime={1200} step={30} minTime={60}
+        keyBindInc='E' keyBindDec='Q'
     />
 
-    <SetValue
-        store={rotateTimer} label={"Rotate Exercise"} maxTime={120} step={10} minTime={10}
+    <SetValue 
+        store={rotateTimer} label={"Rotate Exercises"} maxTime={120} step={10} minTime={10}
+        keyBindInc='D' keyBindDec='A'
     />
 
-    <NextPageButton to="/running" label="Start" navigate={navigate}/>
+    <NextPageButton to="/running" label="Start" keyBind=' ' navigate={navigate}/>
 
     <Popup/>
 </div>
