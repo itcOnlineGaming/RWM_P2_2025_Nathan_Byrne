@@ -25,6 +25,7 @@
     onMount(() => {
         const handleKeydown = (event: KeyboardEvent) => {
             const key = event.key;
+            // Exercise Keys
             if (key >= '0' && key <= '9') {
                 const num = parseInt(event.key);
                 handleKeyboardClicks(num);

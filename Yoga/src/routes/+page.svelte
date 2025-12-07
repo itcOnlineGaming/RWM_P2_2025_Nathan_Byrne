@@ -27,7 +27,7 @@
     />
 
     <!-- Page Navigation -->
-    <NextPageButton to="/running" label="Start" navigate={navigate}/>
+    <NextPageButton to="/running" label="Start" keyBind=' ' navigate={navigate}/>
 
     <!-- Popup for Current State of Mind -->
     <Popup/>
