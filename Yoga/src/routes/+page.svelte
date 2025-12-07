@@ -19,11 +19,13 @@
     <!-- Select Duration -->
     <SetValue 
         store={timer} label={"Duration"} maxTime={1200} step={30} minTime={60}
+        keyBindInc='E' keyBindDec='Q'
     />
 
     <!-- Select Exercise Rotations -->
     <SetValue 
         store={rotateTimer} label={"Rotate Exercises"} maxTime={120} step={10} minTime={10}
+        keyBindInc='D' keyBindDec='A'
     />
 
     <!-- Page Navigation -->
