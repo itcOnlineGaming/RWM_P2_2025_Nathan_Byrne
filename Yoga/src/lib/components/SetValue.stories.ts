@@ -15,7 +15,6 @@ export const SetDuration: Story = {
     minTime: 0,
     step: 20,
     maxTime: 6000,
-    label: "hi",
-    store: {}
+    label: "hi"
   },
 };
