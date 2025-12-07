@@ -1,7 +1,17 @@
 <script lang="ts">
-    import { ExerciseButtons } from "./SelectExercisesArea.stories";
     import { exerciseEnabled, timer, rotateTimer } from "./store";
     import { createEventDispatcher, onDestroy } from "svelte";
+
+    import MeditateImg from "./images/Meditate.png";
+    import DeepBreathsImg from "./images/DeepBreaths.png";
+    import CartwheelImg from "./images/Cartwheel.png";
+    import LoosenUpImg from "./images/LoosenUp.png";
+    import DownwardDogImg from "./images/DownwardDog.png";
+    import BridgePoseImg from "./images/BridgePose.png";
+    import TreePoseImg from "./images/TreePose.png";
+    import PlankImg from "./images/Plank.png";
+    import WarriorI_Img from "./images/WarriorII.png";
+    import WarriorII_Img from "./images/WarriorII.png";
 
     export let timeRemaining = $timer;
     let currentExercise: string = "";
@@ -30,16 +40,16 @@
     }
 
     const exercises: Exercise[] = [
-        { name: "Meditate 🧘", img: "/images/Meditate.png" },
-        { name: "Deep Breaths 😮‍💨", img: "/images/DeepBreaths.png" },
-        { name: "Cartwheel 🤸", img: "/images/Cartwheel.png" },
-        { name: "Loosen Up 🙆", img: "/images/LoosenUp.png" },
-        { name: "Downward Dog 🙇⬆️", img: "/images/DownwardDog.png" },
-        { name: "Bridge Pose 🌉", img: "/images/BridgePose.png" },
-        { name: "Tree Pose 🧍🌿", img: "/images/TreePose.png" },
-        { name: "Plank 🧍➖", img: "/images/Plank.png" },
-        { name: "Warrior I 🚶‍♂️✋", img: "/images/WarriorII.png" },
-        { name: "Warrior II 🚶‍♂️👈👉", img: "/images/WarriorII.png" }
+        { name: "Meditate 🧘", img: MeditateImg },
+        { name: "Deep Breaths 😮‍💨", img: DeepBreathsImg },
+        { name: "Cartwheel 🤸", img: CartwheelImg },
+        { name: "Loosen Up 🙆", img: LoosenUpImg },
+        { name: "Downward Dog 🙇⬆️", img: DownwardDogImg },
+        { name: "Bridge Pose 🌉", img: BridgePoseImg },
+        { name: "Tree Pose 🧍🌿", img: TreePoseImg },
+        { name: "Plank 🧍➖", img: PlankImg },
+        { name: "Warrior I 🚶‍♂️✋", img: WarriorI_Img },
+        { name: "Warrior II 🚶‍♂️👈👉", img: WarriorII_Img }
     ];
 
     function updateCurrentExercise() {

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { get } from 'svelte/store';
-    import { pastFeelingReported, currentFeelingReported, statusMessage } from "./store.ts";
+    import { pastFeelingReported, currentFeelingReported, statusMessage } from "./store";
     import { createEventDispatcher } from 'svelte';
     import "./global.css";
 

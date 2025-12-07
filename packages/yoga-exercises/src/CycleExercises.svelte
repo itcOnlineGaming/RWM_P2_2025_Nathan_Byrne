@@ -1,5 +1,4 @@
 <script lang="ts">
-    //import { ExerciseButtons } from "./SelectExercisesArea.svelte";
     import { exerciseEnabled, timer, rotateTimer } from "./store";
     import { createEventDispatcher, onDestroy } from "svelte";
 

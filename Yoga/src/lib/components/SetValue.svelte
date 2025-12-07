@@ -1,7 +1,6 @@
 <script lang="ts">
     import { writable, type Writable } from "svelte/store";
 
-    // passed in from parent
     export let store: Writable<number>;
     export let label: string;
     export let maxTime: number;

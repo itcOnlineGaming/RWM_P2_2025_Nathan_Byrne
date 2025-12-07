@@ -1,9 +1,7 @@
 <script lang="ts">
     import { get } from 'svelte/store';
     import { goto } from "$app/navigation";
-    import { timer, timeRemaining, completedTime } from "$lib/components/store";
-    import NextPageButton from "$lib/components/NextPageButton.svelte";
-    import CycleExercises from "$lib/components/CycleExercises.svelte";
+    import { NextPageButton, CycleExercises, timer, timeRemaining, completedTime } from 'yoga-exercises';
     import "../page.css";
 
     function handleTimer(event: CustomEvent) {
@@ -27,9 +25,7 @@
 <div class="container">
     <h1 class="text-bubble">Yoga Exercise Session</h1>
 
-    <!-- Shown Current Exercise -->
     <CycleExercises on:timerUpdate={handleTimer}/>
 
-    <!-- Early Navigation to Results -->
     <NextPageButton to="/results" label="End Session Early" navigate={navigate}/>
 </div>
