@@ -34,6 +34,15 @@ This component is able to help users for when they are overwhelmed or are stress
 1. Retry Session: Space
 2. Exit to Main Menu: Escape
 
+## Automated Tests
+All tests for P2 can be found in P1 (Playwright)
+
+## Test Feedback
+Overall, the feedback on the tests were positive, and users felt like this application was helpful / fit the need it was aiming to fill. The main two points gathered by the tests were to work on:
+1. Some buttons and information on the screen was not clear for the user. (3 - Slightly Bad)
+2. Bugs that affected the users sessions. (5 - Application Breaking / Very Bad)
+After the tests, I took time into making sure everything is clear for the user by adding additional text an images where further help might be needed. I also took the time to fix bugs that were common when playing a session. The latest version of the project addresses these two common issues users had
+
 ## Project Structure
 ```
 root/
