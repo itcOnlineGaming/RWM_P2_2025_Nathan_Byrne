@@ -13,6 +13,14 @@ This component is able to help users for when they are overwhelmed or are stress
 7. Enter in a Mood Feeling of 9 and Check the Mood Message
 8. Either: Replay the same Session / Exit to the Main Menu and Create a new Session with any Configurations
 
+## P2 Tasks
+- Updated Tooltips (https://trello.com/c/EjgBskkq)
+- Exercise Images (https://trello.com/c/bRV4gNVI)
+- Refactored Configurable Bar to Support Duration and Cycle Speed (https://trello.com/c/jSokElRR)
+- Unique Cycling Speed for Sessions (https://trello.com/c/jSokElRR)
+- Package Created (https://trello.com/c/VBW3Yrql)
+- Keyboard Support (https://trello.com/c/XF59tcVi)
+
 ## Features Included
 - Packaged Project (Able to be included in other Sveltekit Projects)
 - Keyboard Support
